@@ -1,24 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/pages/home.dart';
 
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  int days = 30;
-  String developer = 'Jinu Varghese';
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Welcome To Flutter'),
-        ),
-        body: Center(
-          child: Text('Hello Everyone for the $days Course with $developer'),
-        ),
-        drawer: Drawer(),
+      home: HomePage(),
+      themeMode: ThemeMode.light,
+      theme: ThemeData(
+        primarySwatch: Colors.deepPurple,
+      ),
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
       ),
     );
   }
